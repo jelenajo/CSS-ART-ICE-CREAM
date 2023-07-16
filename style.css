@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: blue;
+}
+.popsicle {
+    border: 2px solid #fff;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 100% 100% 0 0;
+    background: repeating-linear-gradient(-20deg, #ec38ec 0,#ec38ec 10%,#ec383e 10%,#ec383e 20%,#e9ca00 20%, #e9ca00 20%, #6cc258 20%, #6cc258 30%, #2ed 30%, #2ed 40%);
+    animation: move 5s infinite linear;
+
+}
+@keyframes move {
+    100% {
+        background-position: -400px;
+    }
+    
+}
+.popsicle::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: rgb(70, 3, 3);
+    top: 401px;
+    left: 157px;
+    position: absolute;
+}
